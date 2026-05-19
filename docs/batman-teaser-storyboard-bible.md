@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document locks the teaser trailer version of the Arkham fight sequence. It is not the full final scene. The teaser should sell mood, threat, Batman's tactical presence, Female Two-Face's duality, and the first burst of violent action without revealing every payoff from the final cut.
+This document locks Sequence 01 of the teaser trailer: the Arkham blackout, Female Two-Face reveal, Batman fear reveal, first henchmen fight burst, and batarang button. This is not the full final scene, and it is not the entire teaser trailer. It is one selected teaser sequence that should sell mood, threat, Batman's tactical presence, Female Two-Face's duality, and the first burst of violent action without revealing every payoff from the final cut.
 
 The sequence is a tribute to dark, operatic Batman cinema, with high-end Japanese action-anime rendering traits applied to an original Batman story direction. The rendering should feel sharp, kinetic, dramatic, and hand-composed. It should not make the story, world, or character designs look like another anime property.
 
@@ -305,11 +305,8 @@ Before any paid generation:
 
 If a generator cannot preserve Batman's silhouette, the burned-half reveal, or readable action in darkness, stop and switch approach rather than spending more credits.
 
-## Immediate Next Production Step
+## Immediate Production Instruction
 
-Create a locked prompt pack and asset manifest from this bible:
+Produce Sequence 01 as a cut sheet first, then render from that cut sheet. The cut sheet must specify exact shots, timing, camera, lighting, character action, required keyframes, render prompt, and review criteria.
 
-- `docs/batman-teaser-prompt-pack.md`
-- `docs/batman-teaser-shot-manifest.json`
-
-Those files should drive any later Figma, SuperStoryboard, image generation, or animatic work.
+Do not run paid video generation until the Sequence 01 still keyframes are approved. The first render pass should be a small keyframe set, not a full batch of moving clips.
