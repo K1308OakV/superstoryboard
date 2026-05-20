@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batman Suit Current Sheet - V6 Gritty Settei</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07080a;
+      --panel: #10151b;
+      --line: #313a45;
+      --ink: #eef3f8;
+      --muted: #aeb8c2;
+      --blue: #9bdcff;
+      --gold: #d8b971;
+      --good: #b8e9c6;
+      --bad: #ffaaa2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(155, 220, 255, .12), transparent 26%),
+        radial-gradient(circle at 86% 4%, rgba(216, 185, 113, .10), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1800px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 36px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(26px, 2.4vw, 44px);
+      letter-spacing: 0;
+      line-height: 1.05;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 980px;
+    }
+
+    .tag {
+      flex: 0 0 auto;
+      border: 1px solid rgba(184, 233, 198, .45);
+      color: var(--good);
+      background: rgba(184, 233, 198, .07);
+      padding: 8px 12px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(360px, .7fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .stage {
+      background: #dfe7ed;
+      border: 1px solid #59636e;
+      overflow: hidden;
+    }
+
+    .stage img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.012)), var(--panel);
+      border: 1px solid var(--line);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0 0 11px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    li + li { margin-top: 8px; }
+    strong { color: var(--ink); }
+    .good { color: var(--good); }
+    .bad { color: var(--bad); }
+
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .thumb {
+      border: 1px solid var(--line);
+      background: #151a20;
+      padding: 6px;
+    }
+
+    .thumb img {
+      width: 100%;
+      display: block;
+    }
+
+    .thumb span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    @media (max-width: 1120px) {
+      .layout { grid-template-columns: 1fr; }
+      header { align-items: start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Batman Suit Current Sheet - V6 Gritty Settei</h1>
+        <p class="sub">Current Batman armor direction from HeyGen/Gensis-style prompt-avatar: pitch-black full turnaround, moderate cowl fins, engineered mask, active optics, floor-length cape, mobile protective armor, and heavier gritty Japanese action-anime rendering.</p>
+      </div>
+      <div class="tag">Current Candidate: V6</div>
+    </header>
+
+    <section class="layout">
+      <div class="stage">
+        <img src="assets/heygen-nocturne-knight-v6-gritty-settei.webp" alt="Current gritty pitch-black armored nightmare knight turnaround sheet" />
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h2>Why V6 Leads</h2>
+          <ul>
+            <li><strong class="good">Full-body read:</strong> boots, gauntlets, torso, side, and rear views are visible.</li>
+            <li><strong class="good">Render language:</strong> heavy ink, rough hatching, hard shadow blocks, and smoky background feel more like a production settei sheet.</li>
+            <li><strong class="good">Nightmare read:</strong> active optics, black values, and ragged cape edges make him more intimidating.</li>
+            <li><strong class="good">Helmet correction:</strong> cowl fins are less exaggerated than V4, while the face guard has more engineered structure.</li>
+            <li><strong class="good">Mobility:</strong> segmented torso and legs support sprinting, pivoting, leaping, and close combat.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Still Needs Notes</h2>
+          <ul>
+            <li><strong class="bad">Optics:</strong> this has active optics. We still need the separate close-up keyframe where the optics become the terror image.</li>
+            <li><strong class="bad">Originality:</strong> keep adjusting chest, cowl, and cape language so it never becomes a direct replica.</li>
+            <li><strong class="bad">Final polish:</strong> preserve the gritty render style in every later storyboard keyframe.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Next Character Rule</h2>
+          <ul>
+            <li>After Batman is accepted, the next sheet is Female Two-Face.</li>
+            <li>Use an original mature formal blonde/red-haired leader with emotional intensity and concealed/revealed duality.</li>
+            <li>Do not use real actor names, direct IP labels, or graphic injury language in generation prompts.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Evolution</h2>
+          <div class="thumbs">
+            <div class="thumb">
+              <img src="assets/heygen-nocturne-knight-v1.webp" alt="V1 full-body base" />
+              <span>V1: mood and base body</span>
+            </div>
+            <div class="thumb">
+              <img src="assets/heygen-nocturne-knight-v2-turnaround.webp" alt="V2 turnaround" />
+              <span>V2: sheet structure</span>
+            </div>
+            <div class="thumb">
+              <img src="assets/heygen-nocturne-knight-v3-final-turnaround.webp" alt="V3 turnaround" />
+              <span>V3: cleaner knight sheet</span>
+            </div>
+            <div class="thumb">
+              <img src="assets/heygen-nocturne-knight-v4-nightmare-turnaround.webp" alt="V4 nightmare turnaround" />
+              <span>V4: stronger nightmare shape</span>
+            </div>
+            <div class="thumb">
+              <img src="assets/heygen-nocturne-knight-v6-gritty-settei.webp" alt="V6 gritty settei turnaround" />
+              <span>V6: current render candidate</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

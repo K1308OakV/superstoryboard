@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nocturne Knight Suit - HeyGen V1</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08090b;
+      --panel: #11151a;
+      --panel-2: #171c22;
+      --ink: #eef3f8;
+      --muted: #aab3bc;
+      --line: #303842;
+      --blue: #95d8ff;
+      --red: #e35a4f;
+      --gold: #d5b46c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(149, 216, 255, 0.08), transparent 32%),
+        radial-gradient(circle at 75% 12%, rgba(227, 90, 79, 0.12), transparent 30%),
+        var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1680px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(24px, 2.2vw, 42px);
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 920px;
+    }
+
+    .status {
+      flex: 0 0 auto;
+      border: 1px solid rgba(149, 216, 255, 0.42);
+      color: var(--blue);
+      padding: 8px 11px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(149, 216, 255, 0.08);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.85fr) minmax(360px, .75fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .image-stage {
+      min-height: 70vh;
+      background: #d8dce0;
+      border: 1px solid #48515b;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .image-stage img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)), var(--panel);
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 720;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--gold);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    li + li { margin-top: 8px; }
+    strong { color: var(--ink); font-weight: 680; }
+    .no { color: #ffaaa2; }
+    .yes { color: #b8e9c6; }
+
+    .prompt {
+      white-space: pre-wrap;
+      color: #d9e2ea;
+      font: 12px/1.55 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      background: #090b0e;
+      border: 1px solid #222a33;
+      padding: 14px;
+      max-height: 360px;
+      overflow: auto;
+    }
+
+    @media (max-width: 1050px) {
+      .layout { grid-template-columns: 1fr; }
+      header { align-items: start; flex-direction: column; }
+      .status { align-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Nocturne Knight Suit - HeyGen V1</h1>
+        <p class="sub">Full-body suit base from HeyGen prompt-avatar. This is a direction check for the armor silhouette before spending work on a true production turnaround.</p>
+      </div>
+      <div class="status">Review Base</div>
+    </header>
+
+    <section class="layout">
+      <div class="image-stage">
+        <img src="assets/heygen-nocturne-knight-v1.webp" alt="Full-body black armored nocturnal knight suit concept" />
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h2>What Improved</h2>
+          <ul>
+            <li><strong class="yes">Full body:</strong> head-to-boots read is now visible.</li>
+            <li><strong class="yes">Armor logic:</strong> chest, abdomen, arms, thighs, knees, and boots are separated enough to support mobility.</li>
+            <li><strong class="yes">Cape control:</strong> cape is secondary and does not swallow the body.</li>
+            <li><strong class="yes">Optics:</strong> active white-blue eye slits read clearly.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Still Not Final</h2>
+          <ul>
+            <li><strong class="no">Not a model sheet:</strong> HeyGen returned one hero pose, not front/side/back turnaround views.</li>
+            <li><strong class="no">Too clean:</strong> needs more brutal noir weathering, sharper fear silhouette, and less toy-like symmetry.</li>
+            <li><strong class="no">Helmet:</strong> needs a less familiar face structure and a more knightly, custom cowl read.</li>
+            <li><strong class="no">Background:</strong> current gray-on-gray is readable but still too flat for final review.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Next Exact Pass</h2>
+          <ul>
+            <li>Create a true studio turnaround: front, 3/4, side, back, action stance.</li>
+            <li>Use this as suit base only, not final geometry.</li>
+            <li>Increase contrast: pale neutral sheet background, dark armor, red/blue rim notes.</li>
+            <li>Keep all wording original: no direct IP names in generation prompts.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Generation Brief</h2>
+          <div class="prompt">Original anime-style full-body armored nocturnal knight hero for a cinematic action trailer. Complete body visible from head to boots. Menacing but noble silhouette, silent fear-inducing justice figure, extremely mobile yet sturdy tactical armor. Graphite-black segmented ceramic plates over flexible undersuit, strong chest and abdomen protection without bulky weight, articulated shoulders, gauntlets, utility belt, armored thighs, knee guards, heavy boots. Compact cape or shoulder mantle stays behind the body and does not hide the armor. Helmet has original angular face guard, sealed neck, narrow white-blue active optical visor slits, low integrated armor fins, rain-beaded matte and satin surfaces. High-end 2D anime production rendering, dark-gray contrasting studio background, full body character concept, no text, no logos, no direct movie costume replica, no cropped upper body.</div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

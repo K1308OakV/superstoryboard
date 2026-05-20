@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Batman Optics Workbench</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #050607;
+        color: #f4f7f8;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      main {
+        width: min(1780px, calc(100vw - 36px));
+        margin: 0 auto;
+        padding: 20px 0 40px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 22px;
+        align-items: flex-end;
+        border-bottom: 1px solid #26313a;
+        padding-bottom: 18px;
+      }
+      h1, h2, h3, p { margin: 0; }
+      h1 { font-size: 32px; line-height: 1.05; }
+      .subtitle {
+        margin-top: 8px;
+        color: #aab4be;
+        max-width: 960px;
+        line-height: 1.45;
+      }
+      .badge {
+        white-space: nowrap;
+        padding: 8px 12px;
+        background: rgba(37, 99, 235, 0.16);
+        border: 1px solid rgba(96, 165, 250, 0.65);
+        color: #d9e9ff;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .panel {
+        border: 1px solid #26313a;
+        background: #0d1115;
+      }
+      .panel h2 {
+        padding: 12px 14px;
+        font-size: 14px;
+        color: #f59e0b;
+        text-transform: uppercase;
+        border-bottom: 1px solid #26313a;
+      }
+      .imagebox {
+        height: 420px;
+        background: #000;
+        display: grid;
+        place-items: center;
+      }
+      .imagebox img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      .notes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.15fr;
+        gap: 16px;
+        margin-top: 16px;
+      }
+      .card {
+        border: 1px solid #26313a;
+        background: #0d1115;
+        padding: 16px;
+      }
+      .card h2 {
+        color: #f59e0b;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #b8c2cc;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      li + li { margin-top: 7px; }
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: #d7e5ff;
+        background: #07090b;
+        border: 1px solid #202a33;
+        padding: 12px;
+        line-height: 1.42;
+        font-size: 13px;
+      }
+      .danger { color: #ffb4b4; }
+      .ok { color: #bff6cf; }
+      @media (max-width: 1180px) {
+        header, .comparison, .notes { grid-template-columns: 1fr; display: grid; }
+        header { align-items: start; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Batman Optics Active - V2 Workbench</h1>
+          <p class="subtitle">
+            One character, one target: Batman cowl close-up with night-vision optics active. The existing close-up is
+            a starting point and inference source for mood, rain, intensity, framing, and optics energy. It is not
+            absolute geometry. The goal is your custom tactical suit evolving from that starting point, not a replica
+            of any existing movie suit.
+          </p>
+        </div>
+        <div class="badge">Current Focus: Batman Only</div>
+      </header>
+
+      <section class="comparison">
+        <article class="panel">
+          <h2>Existing Local Reference: starting point, not absolute geometry</h2>
+          <div class="imagebox">
+            <img src="assets/batman-cowl-existing-reference.png" alt="Existing Batman cowl reference" />
+          </div>
+        </article>
+        <article class="panel">
+          <h2>Rejected V1: too close to existing suit language</h2>
+          <div class="imagebox">
+            <img src="assets/batman-optics-v1-rejected.png" alt="Rejected Batman optics render" />
+          </div>
+        </article>
+      </section>
+
+      <section class="notes">
+        <article class="card">
+          <h2>Design Source From Your Direction</h2>
+          <ul>
+            <li>Inspired by tactical modern Batman armor, but not copied from BvS or Dark Knight Rises.</li>
+            <li>Mechanized but lightweight: built for mobility, night combat, and silent brutality.</li>
+            <li>Optics are useful battle tech: night vision, target read, laser/threat detection.</li>
+            <li>Opening silhouette can hide the optics; this close-up is later, already active.</li>
+            <li>The close-up reference guides rain, intensity, cowl proximity, and optic menace; V2 redesigns the actual armor geometry.</li>
+            <li>Atmosphere is Snyder-like Gotham / Arkham darkness, but the rendering is high-end anime action.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Do Not Repeat</h2>
+          <ul>
+            <li class="danger">Do not copy BvS cowl brow, cheek, mouth, or helmet geometry.</li>
+            <li class="danger">Do not make it a bulky cosplay replica or a toy-like 3D helmet.</li>
+            <li class="danger">Do not overlight the city background.</li>
+            <li class="danger">Do not make the optics magical, huge, or decorative.</li>
+            <li class="danger">Do not generate multiple characters yet.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>V3 Safe Render Prompt Draft</h2>
+          <pre>Original nocturnal armored vigilante character model sheet, active tactical night-vision optics, anime studio design sheet. Use the existing close-up only as a starting point for rain intensity, tight framing, menace, and optic energy; redesign all suit geometry into a custom stealth armor design. Slim mechanized graphite-black cowl built from layered ceramic armor plates, low integrated ear-like armor fins, original angular brow plates, original cheek channels, narrow lower face guard, reinforced neck seal, rain beads on matte-gloss black surfaces. Two thin controlled white-blue optical slits already active, precise tactical night-vision glow, useful battle technology, not magic. Include front close-up, three-quarter close-up, side cowl profile, rear neck/cape connection, optics detail, material swatches, silhouette study, annotation callouts. Almost-black asylum-night background, faint red emergency rim light, hard ink shadows, sharp cel shading, premium gritty Japanese action-anime production sheet, noir contrast, terrifying calm.</pre>
+        </article>
+      </section>
+
+      <section class="notes" style="grid-template-columns: 1fr 1fr;">
+        <article class="card">
+          <h2>V2 Acceptance Criteria</h2>
+          <ul>
+            <li class="ok">Looks like your own Batman suit direction, not a recognizable replica.</li>
+            <li class="ok">Optics feel functional for night combat and rifle/laser detection.</li>
+            <li class="ok">Cowl has new geometry: brow, cheek, jaw, ears/fins all redesigned.</li>
+            <li class="ok">Dark Arkham background supports the trailer, not a bright skyline.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Next Action</h2>
+          <p class="subtitle">
+            Render one V3 image from this safe original-design prompt only. If it fails, we correct this page and rerender one image.
+            No batch generation. No other characters until Batman optics active is approved.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

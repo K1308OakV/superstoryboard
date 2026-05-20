@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two-Face Design Review</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --panel: #101214;
+      --line: #34383d;
+      --ink: #f0f2f1;
+      --muted: #a9b0ad;
+      --gold: #d6b875;
+      --red: #c74b43;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(199,75,67,.12), transparent 28%),
+        radial-gradient(circle at 84% 9%, rgba(214,184,117,.10), transparent 28%),
+        var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1720px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 34px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 3vw, 54px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 0;
+      max-width: 980px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      border: 1px solid rgba(214,184,117,.45);
+      color: var(--gold);
+      padding: 9px 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      background: rgba(214,184,117,.06);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01)), var(--panel);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: .03em;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 5px 8px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+
+    .director-composite {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #e4ddc8;
+      isolation: isolate;
+    }
+
+    .half {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      filter: contrast(1.08) saturate(.96);
+    }
+
+    .half.clean {
+      clip-path: inset(0 50% 0 0);
+      background-image: url("assets/heygen-arkham-widow-severe-split-burn-v3.webp");
+      background-size: 174%;
+      background-position: 1% 98%;
+    }
+
+    .half.charred {
+      clip-path: inset(0 0 0 50%);
+      background-image: url("assets/heygen-arkham-widow-severe-split-burn-v3.webp");
+      background-size: 174%;
+      background-position: 99% 98%;
+      filter: contrast(1.14) brightness(.92) saturate(.9);
+    }
+
+    .split-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: rgba(12,12,12,.9);
+      box-shadow: 0 0 18px rgba(0,0,0,.45);
+      z-index: 4;
+    }
+
+    .rain {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(101deg, transparent 0 28px, rgba(255,255,255,.28) 29px 30px, transparent 31px 56px);
+      mix-blend-mode: multiply;
+      opacity: .34;
+      z-index: 5;
+    }
+
+    .notes {
+      padding: 14px 16px 17px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 7px; }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #181c20;
+    }
+
+    .asset-grid.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .asset-grid img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #e4ddc8;
+    }
+
+    .wide img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .good-focus {
+      object-position: 0 100%;
+    }
+
+    .char-focus {
+      object-position: 100% 38%;
+    }
+
+    .stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (max-width: 1120px) {
+      header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Two-Face Design Review</h1>
+        <p class="sub">Director-approved good side locked from the existing sheet. Damage language is drawn from the stronger charred passes, but the final target remains one split identity, not two different characters.</p>
+      </div>
+      <div class="badge">Show This First</div>
+    </header>
+
+    <section class="layout">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Director Composite Target</h2>
+          <div class="tag">Good Side Locked</div>
+        </div>
+        <div class="director-composite">
+          <div class="half clean"></div>
+          <div class="half charred"></div>
+          <div class="split-line"></div>
+          <div class="rain"></div>
+        </div>
+        <div class="notes">
+          <ul>
+            <li>The clean/good half comes from the sheet you approved: copper-blonde hair, severe eyes, formal black coat, composed grief.</li>
+            <li>The top target uses V3 for both halves so the face identity stays consistent.</li>
+            <li>The damaged half should be hardened in motion using V4/V5/V6 texture language: absent hair on the damaged side, charred leathery texture, torn sleeve/neck continuity, hard black shadow.</li>
+            <li>V5/V6 did not replace the identity because they split into separate bodies; they are retained only as damaged-side material references.</li>
+            <li>This is the direction to use for teaser reveal frames: beauty and ruin in one controlled, formal, rain-soaked character.</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="stack">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Approved Good-Side Sheet</h2>
+            <div class="tag">Preserve</div>
+          </div>
+          <div class="asset-grid">
+            <img class="good-focus" src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="Approved good-side and split-visage model sheet" />
+            <img src="assets/heygen-arkham-widow-split-visage-v2-no-text.webp" alt="Earlier clean public-side model sheet" />
+          </div>
+          <div class="notes">
+            <ul>
+              <li>Use the lower-left closeup and the clean full-body read as the good-half identity anchor.</li>
+              <li>Do not delete these passes; they are part of the character continuity packet.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel wide">
+          <div class="panel-head">
+            <h2>Damage Severity References</h2>
+            <div class="tag">V4 + V5</div>
+          </div>
+          <div class="asset-grid three">
+            <img class="char-focus" src="assets/heygen-arkham-widow-charred-half-reveal-v4.webp" alt="Charred half reveal V4" />
+            <img class="char-focus" src="assets/heygen-arkham-widow-severe-half-char-v5.webp" alt="Severe half-char reveal V5" />
+            <img class="char-focus" src="assets/heygen-arkham-widow-director-split-v6.webp" alt="Director split identity attempt V6" />
+          </div>
+          <div class="notes">
+            <ul>
+              <li>V4 is better for two-body public/reveal continuity.</li>
+              <li>V5/V6 are useful mainly for harsher charred-side material language; neither is the final face identity by itself.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

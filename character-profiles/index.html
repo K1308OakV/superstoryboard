@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Batman Teaser - Character Model Sheets</title>
+    <style>
+      :root {
+        --bg: #08090b;
+        --panel: #11151a;
+        --panel-2: #171d24;
+        --ink: #edf0f2;
+        --muted: #9aa3ad;
+        --red: #b91c1c;
+        --amber: #f59e0b;
+        --blue: #6aa6ff;
+        --line: #2a333d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 20% 0%, rgba(185, 28, 28, 0.18), transparent 28rem),
+          radial-gradient(circle at 90% 12%, rgba(106, 166, 255, 0.12), transparent 24rem),
+          linear-gradient(180deg, #050607 0%, var(--bg) 42%, #050607 100%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0;
+      }
+
+      main {
+        width: min(1680px, calc(100vw - 48px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.05;
+        font-weight: 800;
+      }
+
+      .subhead {
+        margin-top: 10px;
+        max-width: 940px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        height: 34px;
+        padding: 0 12px;
+        border: 1px solid rgba(185, 28, 28, 0.65);
+        background: rgba(185, 28, 28, 0.12);
+        color: #ffd6d6;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .strip {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        margin: 22px 0 28px;
+      }
+
+      .step {
+        min-height: 84px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: rgba(17, 21, 26, 0.72);
+      }
+
+      .step strong {
+        display: block;
+        font-size: 13px;
+        color: var(--amber);
+        text-transform: uppercase;
+      }
+
+      .step span {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, var(--panel) 0%, #0d1115 100%);
+      }
+
+      .art {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+        background:
+          linear-gradient(110deg, transparent 0 46%, rgba(255, 255, 255, 0.04) 46% 48%, transparent 48% 100%),
+          radial-gradient(circle at 70% 25%, rgba(245, 158, 11, 0.18), transparent 10rem),
+          linear-gradient(180deg, #171d24 0%, #07090b 100%);
+      }
+
+      .art::before,
+      .art::after {
+        content: "";
+        position: absolute;
+        inset: -20%;
+        background-image:
+          linear-gradient(105deg, transparent 0 47%, rgba(255, 255, 255, 0.12) 47.2% 47.5%, transparent 47.7%),
+          linear-gradient(74deg, transparent 0 62%, rgba(255, 255, 255, 0.08) 62.2% 62.5%, transparent 62.8%);
+        opacity: 0.35;
+      }
+
+      .art::after {
+        transform: translateX(46px);
+        opacity: 0.18;
+      }
+
+      .silhouette {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 150px;
+        height: 230px;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, #191d22 0%, #030405 100%);
+        clip-path: polygon(40% 0, 60% 0, 66% 18%, 78% 26%, 82% 46%, 100% 100%, 0 100%, 18% 46%, 22% 26%, 34% 18%);
+        filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.75));
+      }
+
+      .bat-ears {
+        position: absolute;
+        left: 50%;
+        bottom: 218px;
+        width: 70px;
+        height: 46px;
+        transform: translateX(-50%);
+        background: #060708;
+        clip-path: polygon(0 100%, 18% 0, 38% 68%, 62% 68%, 82% 0, 100% 100%);
+      }
+
+      .optics {
+        position: absolute;
+        left: 50%;
+        bottom: 196px;
+        width: 58px;
+        height: 14px;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .optics span {
+        width: 22px;
+        height: 6px;
+        background: rgba(106, 166, 255, 0.95);
+        box-shadow: 0 0 14px rgba(106, 166, 255, 0.85);
+        transform: skewX(-15deg);
+      }
+
+      .optics.inactive span {
+        background: rgba(15, 18, 21, 0.95);
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .woman {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 116px;
+        height: 242px;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #101318 0 50%, #251010 50% 100%);
+        clip-path: polygon(38% 0, 62% 0, 74% 18%, 78% 48%, 100% 100%, 0 100%, 22% 48%, 26% 18%);
+      }
+
+      .hair {
+        position: absolute;
+        left: 50%;
+        bottom: 194px;
+        width: 88px;
+        height: 76px;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #d9b56a 0 50%, #715027 50% 100%);
+        clip-path: polygon(22% 0, 78% 0, 100% 35%, 78% 100%, 22% 100%, 0 35%);
+      }
+
+      .face-split {
+        position: absolute;
+        left: 50%;
+        bottom: 200px;
+        width: 56px;
+        height: 58px;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #d7b08a 0 50%, #6f2a24 50% 100%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .face-hidden {
+        background: linear-gradient(90deg, #d7b08a 0 56%, #08090b 56% 100%);
+      }
+
+      .goon-row {
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 16px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 8px;
+      }
+
+      .goon {
+        height: 176px;
+        background: linear-gradient(90deg, #242a31 0 50%, #5f1515 50% 100%);
+        clip-path: polygon(38% 0, 62% 0, 76% 20%, 82% 48%, 100% 100%, 0 100%, 18% 48%, 24% 20%);
+      }
+
+      .rifle {
+        position: absolute;
+        left: 50%;
+        top: 85px;
+        width: 230px;
+        height: 8px;
+        transform: translateX(-50%) rotate(-8deg);
+        background: #1b222a;
+        box-shadow: 80px 0 0 rgba(185, 28, 28, 0.9);
+      }
+
+      .laser {
+        position: absolute;
+        left: 50%;
+        top: 92px;
+        width: 360px;
+        height: 2px;
+        transform: translateX(-10%) rotate(-8deg);
+        background: rgba(239, 68, 68, 0.9);
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.75);
+      }
+
+      .body {
+        padding: 18px;
+      }
+
+      .eyebrow {
+        color: var(--amber);
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-top: 7px;
+        font-size: 21px;
+        line-height: 1.15;
+      }
+
+      .read {
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .rules {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 16px;
+      }
+
+      .rules div {
+        min-height: 88px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.035);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .rules strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .rules p {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      footer {
+        margin-top: 24px;
+        padding: 18px;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        background: rgba(17, 21, 26, 0.72);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 1100px) {
+        header,
+        .grid,
+        .strip {
+          grid-template-columns: 1fr;
+        }
+
+        main {
+          width: min(920px, calc(100vw - 28px));
+          padding-top: 20px;
+        }
+
+        .art {
+          height: 280px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Sequence 01 Character Model Board</h1>
+          <p class="subhead">
+            Character sheets first. These are the six profile builds that must land before story-shot rendering:
+            Batman inactive, Batman active optics, Female Two-Face concealed, Female Two-Face reveal, painted goon
+            lineup, and elevated rifle threat.
+          </p>
+        </div>
+        <div class="badge">Pass 0 - Model Sheets</div>
+      </header>
+
+      <section class="strip" aria-label="Render order">
+        <div class="step"><strong>01</strong><span>Batman base armor, optics inactive</span></div>
+        <div class="step"><strong>02</strong><span>Batman close-up, optics active</span></div>
+        <div class="step"><strong>03</strong><span>Female Two-Face concealed side</span></div>
+        <div class="step"><strong>04</strong><span>Female Two-Face burned-half reveal</span></div>
+        <div class="step"><strong>05</strong><span>Diverse painted goon lineup</span></div>
+        <div class="step"><strong>06</strong><span>Elevated rifle threat silhouette</span></div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="art">
+            <div class="bat-ears"></div>
+            <div class="silhouette"></div>
+            <div class="optics inactive"><span></span><span></span></div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet A</div>
+            <h2>Batman - Optics Inactive</h2>
+            <p class="read">First fear image: black armored death-knight silhouette, broad tactical suit, short cowl ears, massive cape, no active glow.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Short ears, heavy cape, broad torso, graphite armor, no clean eye-tech reveal.</p></div>
+              <div><strong>Render Test</strong><p>Front, side, three-quarter, back/cape mass, inactive cowl close-up.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <div class="bat-ears"></div>
+            <div class="silhouette"></div>
+            <div class="optics"><span></span><span></span></div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet B</div>
+            <h2>Batman - Night Vision Active</h2>
+            <p class="read">Later tactical close-up: same suit, same proportions, controlled optic glow, dark backlit background, no activation mechanism.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Same Batman as Sheet A. Optics are precise tech, not magic or decoration.</p></div>
+              <div><strong>Render Test</strong><p>Tight front close-up, three-quarter close-up, optics detail, rain-on-cowl detail.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <div class="woman"></div>
+            <div class="hair"></div>
+            <div class="face-split face-hidden"></div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet C</div>
+            <h2>Female Two-Face - Concealed</h2>
+            <p class="read">Formal blonde leader, composed and dangerous. One side hidden by hair, shadow, framing, or the frame object.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Late 30s/early 40s, formal severe attire, leadership posture, one side concealed.</p></div>
+              <div><strong>Render Test</strong><p>Profile, three-quarter rear, full body, hand/frame detail.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <div class="woman"></div>
+            <div class="hair"></div>
+            <div class="face-split"></div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet D</div>
+            <h2>Female Two-Face - Reveal</h2>
+            <p class="read">The teaser reveal: burned half visible, the other half composed. Serious, tragic, controlled, not exploitative.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Same person as Sheet C. No origin depiction. No gore spectacle.</p></div>
+              <div><strong>Render Test</strong><p>Front reveal, three-quarter reveal, flicker-light test, expression row.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <div class="goon-row">
+              <div class="goon"></div><div class="goon"></div><div class="goon"></div><div class="goon"></div>
+              <div class="goon"></div><div class="goon"></div><div class="goon"></div><div class="goon"></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet E</div>
+            <h2>Painted Goon Lineup</h2>
+            <p class="read">Eight-person criminal crew: majority white with Black, Hispanic, Indian/South Asian, and mixed-background representation.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Shared red/half-face paint language, varied bodies and ages, no ethnic caricature.</p></div>
+              <div><strong>Render Test</strong><p>Full lineup, weapon poses, paint close-ups, muzzle-flash silhouette test.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="art">
+            <div class="laser"></div>
+            <div class="rifle"></div>
+            <div class="silhouette" style="width: 86px; height: 168px; bottom: 18px; opacity: 0.72;"></div>
+          </div>
+          <div class="body">
+            <div class="eyebrow">Sheet F</div>
+            <h2>Elevated Rifle Threat</h2>
+            <p class="read">A barely visible upper-level rifle presence. Thin red laser through rain. Readable to Batman after night vision activates.</p>
+            <div class="rules">
+              <div><strong>Must Hold</strong><p>Silhouette, thin laser, Arkham catwalk/tower geometry, teaser mystery.</p></div>
+              <div><strong>Render Test</strong><p>Rifle silhouette, laser-rain test, elevated platform thumbnail.</p></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer>
+        Next production move: render these six character model sheets first. No story-shot video work until Batman,
+        Female Two-Face, the goon lineup, and the elevated threat are visually approved.
+      </footer>
+    </main>
+  </body>
+</html>

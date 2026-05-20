@@ -9,63 +9,70 @@ Use this as the studio-style character packet before creating keyframes or clips
 ## Global Character Rendering Rules
 
 - Rendering language: premium gritty Japanese action-anime character design, sharp cel shading, hard ink shadows, controlled line weight, cinematic noir contrast.
+- Batman's approved direction is closer to a rough settei / production model sheet than a clean poster: heavy ink, scratch hatching, harsh black shadow masses, smoky gray-white sheet background, rain scuffs, and hand-drawn texture.
 - Do not copy any specific anime character, scene, costume, or shot.
 - Batman should not look like an Attack on Titan character. The anime influence is rendering quality, action intensity, shadow design, and timing language.
 - Characters must hold up in darkness, rain, muzzle flashes, and limited lighting.
 - Prioritize clear silhouette over decorative detail.
 - Avoid overly polished superhero poster poses. These characters belong in a violent Arkham night sequence.
 
-## Sheet A - Batman: Base Armor, Optics Inactive
+## Sheet A - Batman: Full-Body Armor Turnaround, Optics Inactive
 
 **Function:** First fear reveal. This is the Batman the goons see before the night-vision close-up.
 
-**Read:** Black armored death-knight silhouette; human but mythic; tactical genius hidden inside a nightmare shape.
+**Read:** A literal dark knight: human, disciplined, swift, intimidating, and almost silent. The suit should create fear and nightmare pressure, but it should not read as a ghost costume or a heavy statue.
 
 **Core Design:**
 
-- Broad armored torso with heavy tactical chest plating.
-- Short cowl ears, not long fantasy horns.
+- Full body must be visible first. No more cowl-only or upper-body-only design passes.
+- Broad armored torso with protective tactical chest plating that still allows athletic movement.
+- Moderate-to-long cowl ears / fins are allowed, but V4 proved overlong ears can become distracting. The V6 direction is better: intimidating but not exaggerated.
 - Thick neck and reinforced jaw/cowl structure.
-- Cape has mass and weight; it can hide body motion.
+- Cape reaches the floor and adds royal, frightening authority. It can touch the ground, but the front/side armor profile must remain readable.
 - Gauntlets are heavy and practical, with hard angular forearm armor.
 - Utility belt is present but subdued.
 - Boots are reinforced, grounded, and weighty.
-- Armor is black / charcoal with subtle graphite highlights.
+- Armor is pitch black / near-black graphite with only thin edge highlights. Avoid gray-knight reads.
 - Eye openings exist but are not emphasized.
 - No active optic glow in this version.
+- The suit leans mechanical and tactical, inspired by modern dark-knight armor language, but it must remain custom and clearly different from any single existing movie suit.
+- It should feel more mobile than a heavy plated war suit: Bruce can sprint, pivot, leap, and strike with near lightning speed.
 
 **Silhouette Rules:**
 
 - Strong shoulders.
 - Broad upper body tapering into controlled waist.
-- Cape creates a large black triangular mass.
-- Head/cowl should read instantly as Batman-inspired without becoming a monster.
+- Knightly upper-body authority without bulky immobility.
+- Cape creates a floor-length rear mass and fear silhouette, but the body cannot disappear inside it.
+- Head/cowl should read as a fear-inducing dark knight symbol without becoming a monster or a direct replica.
 
 **Expression / Performance:**
 
 - No visible mouth expression unless needed.
-- The pose should be still, controlled, and predatory.
+- The pose should be still, controlled, predatory, and silent.
 - He should look like he arrived before anyone noticed.
+- Silence is part of the character. In this sequence he does not speak; the suit and movement carry the threat.
 
 **Model Sheet Views Needed:**
 
 - Front view.
 - Three-quarter view.
 - Side view.
-- Back/cape mass view.
+- Back view with cape / shoulder mantle controlled.
+- Full-body action stance showing mobility.
 - Close-up cowl with inactive optics.
 - Gauntlet/forearm detail.
 
 **Prompt Anchor:**
 
 ```text
-studio character model sheet of black armored Batman-inspired vigilante, optics inactive, short cowl ears, broad tactical armor, heavy cape mass, reinforced gauntlets, graphite black armor, futuristic knight silhouette, premium gritty Japanese action anime character design, sharp cel shading, hard ink shadows, clean turnaround poses, white background or neutral dark gray background, no glowing eyes
+original 2D anime settei production turnaround sheet of a pitch-black armored nocturnal dark knight hero, optics inactive, complete full-body front view, three-quarter view, side view, back view, mobile tactical armor, segmented ceramic chest and abdomen plates, flexible undersuit, reinforced gauntlets, utility belt, armored thighs, knee guards, heavy boots, moderate integrated cowl fins, engineered angular face guard shaped around the hidden human face, floor-length cape touching the ground behind him, fear-inducing silent justice silhouette, gritty premium Japanese action-anime rendering, heavy ink linework, scratch hatching, harsh black shadow masses, smoky gray-white sheet background, no glowing eyes
 ```
 
 **Negative Prompt:**
 
 ```text
-glowing eyes, long demon horns, fantasy monster, toy armor, photorealistic cosplay, cute proportions, spandex suit, bright superhero poster, Attack on Titan character, exposed face
+glowing eyes, demon horns, fantasy monster, gray armor, toy armor, photorealistic cosplay, cute proportions, spandex suit, bright superhero poster, direct movie costume replica, exposed face, cape hiding the body, cropped body, readable text, labels, logos
 ```
 
 ## Sheet B - Batman: Night-Vision Optics Active
@@ -100,13 +107,13 @@ glowing eyes, long demon horns, fantasy monster, toy armor, photorealistic cospl
 **Prompt Anchor:**
 
 ```text
-studio close-up model sheet of black armored Batman-inspired vigilante cowl with night-vision optics active, controlled tactical eye glow, rain beads on graphite black armor, short cowl ears, hard jawline cowl, premium gritty Japanese action anime character design, sharp cel shading, hard ink shadows, dark neutral background, backlit rim light, serious tactical presence
+original anime close-up model sheet of graphite-black armored nocturnal knight cowl with night-vision optics active, controlled white-blue tactical eye slits, rain beads on segmented armor, short integrated armor fins, hard angular face guard, sealed neck ring, premium gritty Japanese action anime rendering, sharp cel shading, hard ink shadows, dark neutral background with backlit rim light, serious tactical presence
 ```
 
 **Negative Prompt:**
 
 ```text
-magic glowing eyes, neon superhero poster, visible human eyes, cheerful expression, excessive HUD graphics, cyberpunk helmet unrelated to Batman, toy plastic, photorealistic cosplay
+magic glowing eyes, neon superhero poster, visible human eyes, cheerful expression, excessive HUD graphics, unrelated cyberpunk helmet, toy plastic, photorealistic cosplay, direct movie costume replica, readable text, labels, logos
 ```
 
 ## Sheet C - Female Two-Face: Composed Side Concealed Burn
@@ -117,7 +124,7 @@ magic glowing eyes, neon superhero poster, visible human eyes, cheerful expressi
 
 **Core Design:**
 
-- Blonde, medium shoulder-length hair.
+- Copper-blonde / red-blonde, medium shoulder-length hair.
 - Late 30s to early 40s.
 - Formal attire: tailored coat, suit, or severe formal dress language.
 - Clothing should look expensive but rain-soaked and severe.
@@ -147,26 +154,35 @@ magic glowing eyes, neon superhero poster, visible human eyes, cheerful expressi
 **Prompt Anchor:**
 
 ```text
-studio character model sheet of formal blonde Female Two-Face crime leader, late 30s to early 40s, medium shoulder-length hair, elegant severe formal attire, rain-soaked tailored coat, holding a frame object, one side of face concealed by hair shadow and camera angle, controlled dangerous posture, premium gritty Japanese action anime character design, sharp cel shading, hard ink shadows, noir palette
+original 2D anime settei model sheet of a mature copper-blonde formal crime matriarch, late 30s to early 40s, shoulder-length hair, severe rain-soaked black tailored coat and skirt suit, holding a framed photograph, one side of face concealed by hair shadow and camera angle, controlled dangerous posture, formal grief, cold rage, premium gritty Japanese action anime rendering, heavy ink, sharp cel shadows, rain texture, pale neutral background, no readable text
 ```
 
 **Negative Prompt:**
 
 ```text
-full burned side reveal, comedic villain, schoolgirl outfit, oversexualized pose, glamour beauty shoot, gore, smiling pinup, clown costume
+full scarred side reveal, comedic villain, schoolgirl outfit, oversexualized pose, glamour beauty shoot, gore, smiling pinup, clown costume, readable text, labels, logos, real person likeness, celebrity likeness
 ```
 
 ## Sheet D - Female Two-Face: Burned-Half Reveal
 
 **Function:** Teaser identity reveal. This version is shown in the trailer.
 
-**Read:** Duality, grief, danger, and theatrical control. Not a joke, not a monster gag.
+**Read:** Duality, grief, danger, and theatrical control. The reveal must read as true half-and-half damage, not a faint facial scar. Not a joke, not a monster gag.
+
+**Director-Approved Identity Anchor:** Use `character-profiles/assets/heygen-arkham-widow-severe-split-burn-v3.webp` as the approved good-half character identity. The clean/good side from this sheet is the target face, hair, posture, and formal costume read. Later harsher passes should inform the damaged-side material only; they should not replace the woman's identity.
+
+**Source-Material Severity Solution:** The design should carry the same dramatic read as the strongest comic, film, and Arkham-style Two-Face interpretations: one beautiful composed side, one visibly ruined side, divided cleanly enough that the audience understands the identity instantly. The production approach is not medical gore. It uses charred silhouette, absent hair, severe texture plates, sunken shadow shapes, wet-black contrast, and damaged costume continuity to imply devastating injury without exposed anatomy.
 
 **Design Rules:**
 
 - Same hair, age, outfit, and silhouette as Sheet C.
-- Burned half is clearly visible.
-- The injury should be readable but not exploitative.
+- Burned / scarred half is clearly visible as a severe stylized comic-anime injury.
+- The damaged side should have a leathery, charred, puckered texture read while staying non-graphic and non-medical.
+- Hair should be absent or mostly burned away on the damaged side. A true half-burn reveal should not preserve normal hair over that region.
+- The eye/cheek/jaw area should read as severely deformed through shadow, structure, and stylized scar plates, without medical gore.
+- The asymmetry should continue from face to neck and into the torn upper sleeve / upper arm.
+- The boundary between composed side and damaged side should be bold enough for a teaser reveal.
+- The reveal can be made more frightening by lighting choice: one-frame lightning, muzzle flash, red emergency bounce, and hard black negative space can make the damaged side feel harsher than a fully lit static sheet.
 - Do not depict how it happened.
 - Do not dramatize the origin.
 - The unburned side remains composed and elegant.
@@ -188,13 +204,13 @@ full burned side reveal, comedic villain, schoolgirl outfit, oversexualized pose
 **Prompt Anchor:**
 
 ```text
-studio character model sheet of formal blonde Female Two-Face crime leader, late 30s to early 40s, medium shoulder-length hair, elegant severe formal attire, burned half of face visible, other half composed and elegant, tragic duality, controlled menace, respectful non-exploitative design, premium gritty Japanese action anime character design, sharp cel shading, hard ink shadows, noir lighting test
+original 2D anime settei model sheet of the same mature copper-blonde formal crime matriarch, late 30s to early 40s, revealed version with dramatic exact half-and-half face split, one side elegant and composed, the other side severely burned/scarred with absent hair or burned stubble, dark leathery char texture, puckered scar plates, sunken shadowed eye area, severe cheek and jaw deformation, asymmetry continuing across face, neck, hand, torn sleeve and upper arm, severe rain-soaked black tailored coat and skirt suit, holding a framed photograph, beautiful but terrifying contrast, formal tragedy, controlled rage, stylized PG-13 comic/anime villain injury, premium gritty Japanese action anime rendering, heavy ink, sharp cel shadows, rain texture, pale neutral background, no readable text, no exposed muscle, no viscera
 ```
 
 **Negative Prompt:**
 
 ```text
-injury origin, graphic injury creation, gore focus, medical horror, zombie, parody, comedic expression, oversexualized pose, exaggerated monster design
+injury origin, graphic injury creation, gore focus, medical horror, zombie, parody, comedic expression, oversexualized pose, exaggerated monster design, readable text, labels, logos, real person likeness, celebrity likeness
 ```
 
 ## Sheet E - Painted Goon Lineup
