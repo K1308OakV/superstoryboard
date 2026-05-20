@@ -4,9 +4,10 @@
 
 This plan starts fresh from the current decision: only two character sheets matter for this scene before motion work:
 
-- Silent armored knight: `character-profiles/assets/heygen-nocturne-knight-v6-gritty-settei.webp`
+- Silent armored knight production settei: `character-profiles/assets/heygen-nocturne-knight-production-settei-v7.webp`
 - Formal split-visage antagonist public/concealed read: `character-profiles/assets/heygen-arkham-widow-split-visage-v2-no-text.webp`
 - Formal split-visage antagonist approved identity / good-half anchor: `character-profiles/assets/heygen-arkham-widow-severe-split-burn-v3.webp`
+- Formal split-visage antagonist production settei / turnaround structure: `character-profiles/assets/heygen-arkham-widow-production-settei-v7.webp`
 - Formal split-visage antagonist hardest reveal read: `character-profiles/assets/heygen-arkham-widow-charred-half-reveal-v4.webp`
 - Formal split-visage antagonist harsher damaged-side material reference: `character-profiles/assets/heygen-arkham-widow-severe-half-char-v5.webp`
 
@@ -32,7 +33,7 @@ The teaser can use two separate sequences because the intervening confrontation/
 2. Side-profile leader: formal woman holding a framed photograph, one side hidden by hair, frame, and angle.
 3. Close hand/frame insert: her grip tightens; rain runs over glass.
 4. Goon-light pass: muzzle flash or lamp flicker briefly reveals the marked men.
-5. Reveal: angle changes and her damaged side becomes visible in a severe stylized source-material way. Preserve the V3 good-side face as the identity anchor while using V4/V5 only for harsher damaged-side material: absent hair on the damaged side, charred leathery texture, harsh shadow, and torn formalwear continuity, without exposed medical anatomy.
+5. Reveal: angle changes and her damaged side becomes visible in a severe stylized source-material way. Preserve the V3 good-side face as the identity anchor, use V7 for turnaround/costume structure, and use V4/V5 only for harsher damaged-side material: absent hair on the damaged side, charred leathery texture, harsh shadow, and torn formalwear continuity, without exposed medical anatomy.
 6. Blackout: lights cut, leaving rain, gunmetal silhouettes, and panic.
 
 **Female Dialogue Candidate:**

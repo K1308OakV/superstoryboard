@@ -10,6 +10,7 @@ Use this as the studio-style character packet before creating keyframes or clips
 
 - Rendering language: premium gritty Japanese action-anime character design, sharp cel shading, hard ink shadows, controlled line weight, cinematic noir contrast.
 - Batman's approved direction is closer to a rough settei / production model sheet than a clean poster: heavy ink, scratch hatching, harsh black shadow masses, smoky gray-white sheet background, rain scuffs, and hand-drawn texture.
+- The current production reference packet is `character-profiles/production-settei-packet.html`.
 - Do not copy any specific anime character, scene, costume, or shot.
 - Batman should not look like an Attack on Titan character. The anime influence is rendering quality, action intensity, shadow design, and timing language.
 - Characters must hold up in darkness, rain, muzzle flashes, and limited lighting.
@@ -37,6 +38,7 @@ Use this as the studio-style character packet before creating keyframes or clips
 - No active optic glow in this version.
 - The suit leans mechanical and tactical, inspired by modern dark-knight armor language, but it must remain custom and clearly different from any single existing movie suit.
 - It should feel more mobile than a heavy plated war suit: Bruce can sprint, pivot, leap, and strike with near lightning speed.
+- Current settei pass: `character-profiles/assets/heygen-nocturne-knight-production-settei-v7.webp`. This is stronger than the older V6 page because it includes front, three-quarter, side, back, action pose, cowl, optics, gauntlet, boot, and belt detail panels. Use V7 as the animation production base unless later corrected.
 
 **Silhouette Rules:**
 
@@ -170,6 +172,8 @@ full scarred side reveal, comedic villain, schoolgirl outfit, oversexualized pos
 **Read:** Duality, grief, danger, and theatrical control. The reveal must read as true half-and-half damage, not a faint facial scar. Not a joke, not a monster gag.
 
 **Director-Approved Identity Anchor:** Use `character-profiles/assets/heygen-arkham-widow-severe-split-burn-v3.webp` as the approved good-half character identity. The clean/good side from this sheet is the target face, hair, posture, and formal costume read. Later harsher passes should inform the damaged-side material only; they should not replace the woman's identity.
+
+**Current Settei Pass:** Use `character-profiles/assets/heygen-arkham-widow-production-settei-v7.webp` for turnaround structure, coat silhouette, walking pose, side/back views, and expression-strip planning. V7 improves the professional model-sheet structure, but V3 still controls the final good-half identity and exact reveal face.
 
 **Source-Material Severity Solution:** The design should carry the same dramatic read as the strongest comic, film, and Arkham-style Two-Face interpretations: one beautiful composed side, one visibly ruined side, divided cleanly enough that the audience understands the identity instantly. The production approach is not medical gore. It uses charred silhouette, absent hair, severe texture plates, sunken shadow shapes, wet-black contrast, and damaged costume continuity to imply devastating injury without exposed anatomy.
 
