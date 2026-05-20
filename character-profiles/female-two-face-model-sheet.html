@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Female Two-Face Model Sheet</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #060606;
+      --panel: #111315;
+      --panel-2: #171a1d;
+      --line: #343a40;
+      --ink: #f0f2f0;
+      --muted: #adb4b0;
+      --gold: #d7ba75;
+      --red: #bc4c46;
+      --paper: #e7e0cd;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(188,76,70,.14), transparent 30%),
+        radial-gradient(circle at 88% 4%, rgba(215,186,117,.1), transparent 26%),
+        linear-gradient(180deg, #080909, #030303);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1780px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 36px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(30px, 3vw, 56px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 0;
+      max-width: 1040px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .status {
+      flex: 0 0 auto;
+      border: 1px solid rgba(215,186,117,.5);
+      color: var(--gold);
+      padding: 9px 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      background: rgba(215,186,117,.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.16fr .84fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01)), var(--panel);
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: .03em;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 5px 8px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+
+    .hero-sheet {
+      background: var(--paper);
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero-sheet img {
+      display: block;
+      width: 100%;
+    }
+
+    .notes {
+      padding: 14px 16px 17px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .notes strong { color: var(--ink); font-weight: 650; }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .crops {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: #1a1f22;
+    }
+
+    .crop {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .crop::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 5px 7px;
+      color: #f6f3ea;
+      background: rgba(5,5,5,.78);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: 11px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      z-index: 3;
+    }
+
+    .crop img {
+      width: 205%;
+      height: 205%;
+      object-fit: cover;
+      position: absolute;
+      max-width: none;
+    }
+
+    .clean img {
+      left: -2%;
+      top: -100%;
+    }
+
+    .reveal img {
+      left: -101%;
+      top: -100%;
+    }
+
+    .full-clean img {
+      left: 0;
+      top: 0;
+    }
+
+    .full-reveal img {
+      left: -101%;
+      top: 0;
+    }
+
+    .rules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .rule {
+      background: var(--panel-2);
+      padding: 14px;
+      min-height: 148px;
+    }
+
+    .rule h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .rule p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+
+    .warning {
+      border-left: 3px solid var(--red);
+      padding: 11px 13px;
+      background: rgba(188,76,70,.08);
+      color: #d6d0ca;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1160px) {
+      header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .rules,
+      .crops {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Female Two-Face Model Sheet</h1>
+        <p class="sub">Clean production direction for the character. This is not a pasted final image; this page locks the approved identity and describes how the final single-character sheet should be drawn or regenerated.</p>
+      </div>
+      <div class="status">V3 Identity Lock</div>
+    </header>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Approved Character Identity Sheet</h2>
+          <div class="tag">Use As Base</div>
+        </div>
+        <div class="hero-sheet">
+          <img src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="Approved female Two-Face anime model sheet" />
+        </div>
+        <div class="notes">
+          <ul>
+            <li><strong>Final face identity:</strong> use the lower-left closeup and the clean full-body side from this sheet as the approved face, hair, eyes, posture, and costume anchor.</li>
+            <li><strong>Final reveal identity:</strong> the bottom-right closeup is the strongest current readable split-visage pass because it still feels like the same woman.</li>
+            <li><strong>Do not use the pasted composite as final art.</strong> Use the notes below to direct a fresh coherent model sheet or storyboard frame.</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="stack">
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Model Sheet Reads</h2>
+            <div class="tag">Crops From V3</div>
+          </div>
+          <div class="crops">
+            <div class="crop clean" data-label="Good Side Closeup">
+              <img src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="" />
+            </div>
+            <div class="crop reveal" data-label="Split Reveal Closeup">
+              <img src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="" />
+            </div>
+            <div class="crop full-clean" data-label="Concealed Full Body">
+              <img src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="" />
+            </div>
+            <div class="crop full-reveal" data-label="Reveal Full Body">
+              <img src="assets/heygen-arkham-widow-severe-split-burn-v3.webp" alt="" />
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Final Design Rules</h2>
+            <div class="tag">For Fresh Sheet</div>
+          </div>
+          <div class="rules">
+            <div class="rule">
+              <h3>Identity</h3>
+              <p>Mature copper-blonde woman, late 30s to early 40s, severe eyes, controlled grief, formal black rain-soaked coat and skirt suit, framed photograph held tightly.</p>
+            </div>
+            <div class="rule">
+              <h3>Good Half</h3>
+              <p>Keep V3's elegant face, hair mass, and composed expression. The good side must stay human, beautiful, cold, and director-controlled.</p>
+            </div>
+            <div class="rule">
+              <h3>Damaged Half</h3>
+              <p>Push the reveal with charred leathery texture, broken scar plates, darker sunken eye shadow, damaged neck and upper arm, and hair loss on the damaged side.</p>
+            </div>
+            <div class="rule">
+              <h3>Animation Use</h3>
+              <p>Hide the damaged side in profile first. Reveal it with one hard flicker, lightning edge, muzzle flash, or red emergency bounce. Do not over-explain the origin.</p>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="warning">Production judgment: the final image should be regenerated or drawn as one coherent character sheet using V3 as the base. V4/V5/V6 are useful only for damage intensity, not for replacing her face.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
