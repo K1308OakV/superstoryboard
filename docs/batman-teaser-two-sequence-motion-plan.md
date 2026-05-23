@@ -55,15 +55,21 @@ So I made one too.
 
 **Location:** Same general Arkham storm environment, but geography may shift to a darker courtyard lane, loading approach, or open service yard.
 
+**Dedicated Storyboard:** `docs/batman-teaser-sequence-b-goon-fight-storyboard.md` and `character-profiles/sequence-b-goon-fight-storyboard.html`.
+
 **Visual Beats:**
 
 1. Hard cut to darkness: rain, muzzle flashes, bodies moving fast, no clean establishing comfort.
-2. First combat read: the knight hits from shadow, silent, brutal, economical.
-3. Optics close-up: active white-blue slits become the only stable bright point.
-4. Goon fire: automatic fire strobes armor plates and cape edges.
-5. Upward threat read: a higher-position rifle/laser threat is barely visible.
-6. Batarang button: slow-motion throw upward through rain and muzzle-light, Snyder-style time dilation.
-7. End frame: the weapon arcs into blackness; cut before impact.
+2. Batman is already inside the group, revealed only by strobe-like muzzle flashes.
+3. First combat read: one silent takedown through forearm block and close body check.
+4. Two more goons close in immediately; Batman redirects, pivots, and counters through the melee.
+5. Cape turn, elbow, shoulder, and gauntlet strikes show he is still outnumbered and moving.
+6. Optics close-up: active white-blue slits become the only stable bright point while the fight continues around him.
+7. Upward threat read: a higher-position rifle/laser threat is barely visible.
+8. Batman blocks or parries a nearby goon while the other hand reaches for a batarang.
+9. Batarang button: slow-motion throw upward through rain and muzzle-light, Snyder-style time dilation.
+10. Batman pivots back into the ground fight before impact is shown.
+11. End frame: the weapon arcs into blackness toward the elevated threat; cut before impact.
 
 **Motion Rules:**
 
@@ -72,6 +78,7 @@ So I made one too.
 - Movement should alternate between near-black readability and violent flash-lit clarity.
 - Lightning is secondary; firearm flashes and optics carry the visual rhythm.
 - Slow motion is reserved for the batarang button, not every hit.
+- The batarang does not reach or hit the elevated threat in the teaser. That payoff is reserved for the full short film.
 
 ## First Motion Deliverable
 

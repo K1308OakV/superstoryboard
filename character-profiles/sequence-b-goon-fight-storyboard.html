@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sequence B Storyboard - Goon Fight / Batarang</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050607;
+      --panel: #11161b;
+      --panel-2: #171d23;
+      --line: #303942;
+      --ink: #eef3f5;
+      --muted: #a9b5bd;
+      --gold: #d8ba72;
+      --blue: #b9ecff;
+      --red: #d74d46;
+      --amber: #ffc46c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 16% 10%, rgba(185,236,255,.10), transparent 28%),
+        radial-gradient(circle at 86% 8%, rgba(215,77,70,.13), transparent 28%),
+        linear-gradient(180deg, #080a0d, #020303);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1840px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 22px 0 38px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 3vw, 56px);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      max-width: 1120px;
+      line-height: 1.45;
+    }
+
+    .status {
+      flex: 0 0 auto;
+      border: 1px solid rgba(216,186,114,.5);
+      color: var(--gold);
+      padding: 9px 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+      background: rgba(216,186,114,.06);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)), var(--panel);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--gold);
+      font-size: 15px;
+      letter-spacing: .03em;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 5px 8px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+
+    .animatic {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #020304;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .yard,
+    .rain,
+    .grade,
+    .flash,
+    .laser,
+    .shot {
+      position: absolute;
+      inset: 0;
+    }
+
+    .yard {
+      background:
+        linear-gradient(180deg, #151b20 0 46%, #050607 46% 100%),
+        repeating-linear-gradient(90deg, transparent 0 88px, rgba(255,255,255,.035) 89px 91px);
+    }
+
+    .yard::before {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      top: 11%;
+      height: 14%;
+      border-top: 2px solid rgba(255,255,255,.08);
+      border-bottom: 2px solid rgba(255,255,255,.08);
+      background: repeating-linear-gradient(90deg, transparent 0 42px, rgba(255,255,255,.06) 43px 45px);
+    }
+
+    .yard::after {
+      content: "";
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: 4%;
+      height: 22%;
+      transform: perspective(620px) rotateX(62deg);
+      background:
+        radial-gradient(ellipse at 40% 48%, rgba(255,255,255,.16), transparent 45%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.45));
+      filter: blur(.3px);
+    }
+
+    .rain {
+      z-index: 32;
+      pointer-events: none;
+      opacity: .54;
+      mix-blend-mode: screen;
+      background:
+        repeating-linear-gradient(104deg, transparent 0 16px, rgba(210,232,238,.28) 17px 18px, transparent 19px 36px),
+        repeating-linear-gradient(100deg, transparent 0 58px, rgba(210,232,238,.16) 59px 60px, transparent 61px 108px);
+      background-size: 160px 240px, 240px 360px;
+      animation: rain .42s linear infinite;
+    }
+
+    @keyframes rain {
+      from { background-position: 0 0, 0 0; }
+      to { background-position: -64px 240px, -96px 360px; }
+    }
+
+    .grade {
+      z-index: 35;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 45%, transparent 0 32%, rgba(0,0,0,.22) 46%, rgba(0,0,0,.82) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.52));
+    }
+
+    .flash {
+      z-index: 30;
+      opacity: 0;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(circle at 22% 55%, rgba(255,226,160,.95), transparent 8%),
+        radial-gradient(circle at 78% 42%, rgba(255,226,160,.75), transparent 11%),
+        radial-gradient(circle at 56% 12%, rgba(185,236,255,.34), transparent 28%);
+      animation: flash 5.8s steps(1, end) infinite;
+    }
+
+    @keyframes flash {
+      0%, 12%, 18%, 31%, 39%, 52%, 58%, 70%, 77%, 100% { opacity: 0; }
+      13%, 32%, 53%, 71% { opacity: .78; }
+      16%, 36%, 56%, 74% { opacity: .18; }
+    }
+
+    .laser {
+      z-index: 31;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .laser::before {
+      content: "";
+      position: absolute;
+      left: 62%;
+      top: 16%;
+      width: 34%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,68,58,.8), transparent);
+      transform: rotate(19deg);
+      filter: blur(.3px);
+    }
+
+    .shot[data-key="b07"].active ~ .laser,
+    .shot[data-key="b09"].active ~ .laser,
+    .shot[data-key="b11"].active ~ .laser {
+      opacity: .88;
+    }
+
+    .shot {
+      z-index: 3;
+      opacity: 0;
+      transition: opacity .18s ease;
+    }
+
+    .shot.active { opacity: 1; }
+
+    .goon {
+      position: absolute;
+      width: 5.1%;
+      height: 28%;
+      bottom: 19%;
+      background: linear-gradient(90deg, #050506, #242b31 52%, #070808);
+      clip-path: polygon(36% 0, 64% 0, 76% 18%, 84% 56%, 100% 100%, 0 100%, 16% 56%, 24% 18%);
+      filter: drop-shadow(0 12px 14px rgba(0,0,0,.8));
+    }
+
+    .goon::before {
+      content: "";
+      position: absolute;
+      top: 6%;
+      left: 28%;
+      width: 44%;
+      height: 15%;
+      border-radius: 50%;
+      background: linear-gradient(90deg, rgba(215,77,70,.8) 0 45%, rgba(230,232,232,.42) 46% 100%);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .goon::after {
+      content: "";
+      position: absolute;
+      right: -54%;
+      top: 36%;
+      width: 82%;
+      height: 8%;
+      background: #262b30;
+      transform: rotate(-12deg);
+      transform-origin: left center;
+    }
+
+    .g1 { left: 10%; }
+    .g2 { left: 22%; bottom: 17%; transform: scale(1.08); }
+    .g3 { left: 34%; bottom: 21%; transform: scale(.92); }
+    .g4 { left: 55%; bottom: 18%; transform: scale(1.05); }
+    .g5 { left: 70%; bottom: 20%; transform: scale(.96); }
+    .g6 { left: 82%; bottom: 18%; transform: scale(1.1); }
+
+    .bat {
+      position: absolute;
+      left: 45%;
+      bottom: 12%;
+      width: 10%;
+      height: 48%;
+      background: linear-gradient(90deg, #010101, #161a1f 50%, #030303);
+      clip-path: polygon(42% 0, 58% 0, 70% 13%, 76% 38%, 90% 100%, 10% 100%, 24% 38%, 30% 13%);
+      filter: drop-shadow(0 18px 20px rgba(0,0,0,.88));
+    }
+
+    .bat::before {
+      content: "";
+      position: absolute;
+      left: 30%;
+      top: -8%;
+      width: 40%;
+      height: 19%;
+      background: #060708;
+      clip-path: polygon(0 100%, 18% 0, 34% 58%, 50% 100%, 66% 58%, 82% 0, 100% 100%);
+    }
+
+    .cape {
+      position: absolute;
+      left: 39%;
+      bottom: 5%;
+      width: 22%;
+      height: 57%;
+      background: linear-gradient(90deg, #000, #111820 52%, #000);
+      clip-path: polygon(42% 0, 58% 0, 82% 100%, 55% 84%, 48% 100%, 37% 82%, 14% 100%);
+      opacity: .88;
+    }
+
+    .optic {
+      position: absolute;
+      z-index: 26;
+      top: 31%;
+      width: 3.8%;
+      height: 1%;
+      background: var(--blue);
+      box-shadow: 0 0 18px 7px rgba(185,236,255,.8);
+      opacity: 0;
+    }
+
+    .optic.left { left: 45.4%; transform: skewX(-12deg); }
+    .optic.right { left: 50.6%; transform: skewX(12deg); }
+
+    .muzzle {
+      position: absolute;
+      z-index: 27;
+      width: 15%;
+      height: 2.3%;
+      background: linear-gradient(90deg, rgba(255,252,218,.96), rgba(255,190,82,.72), transparent);
+      filter: blur(.4px);
+      opacity: 0;
+    }
+
+    .m1 { left: 17%; top: 49%; transform: rotate(9deg); }
+    .m2 { left: 67%; top: 42%; transform: rotate(188deg); }
+    .m3 { left: 76%; top: 59%; transform: rotate(196deg); }
+
+    .shot.active .muzzle {
+      animation: muzzle .72s steps(1, end) infinite;
+    }
+
+    .shot.active .m2 { animation-delay: .2s; }
+    .shot.active .m3 { animation-delay: .36s; }
+
+    @keyframes muzzle {
+      0%, 48%, 67%, 100% { opacity: 0; }
+      49%, 66% { opacity: .95; }
+    }
+
+    .motion {
+      position: absolute;
+      z-index: 24;
+      border: 2px solid rgba(185,236,255,.75);
+      border-left: 0;
+      border-bottom: 0;
+      width: 17%;
+      height: 22%;
+      opacity: 0;
+      filter: drop-shadow(0 0 7px rgba(185,236,255,.5));
+      transform: rotate(-18deg);
+    }
+
+    .batarang {
+      position: absolute;
+      z-index: 29;
+      left: 47%;
+      top: 63%;
+      width: 11%;
+      height: 4.8%;
+      background: #020303;
+      clip-path: polygon(0 50%, 27% 0, 50% 34%, 73% 0, 100% 50%, 71% 42%, 50% 100%, 29% 42%);
+      opacity: 0;
+      filter: drop-shadow(0 0 10px rgba(185,236,255,.55));
+    }
+
+    .catwalk-threat {
+      position: absolute;
+      z-index: 22;
+      right: 14%;
+      top: 8%;
+      width: 9%;
+      height: 16%;
+      opacity: 0;
+      background: #060708;
+      clip-path: polygon(37% 0, 62% 0, 76% 26%, 100% 100%, 0 100%, 24% 26%);
+    }
+
+    .catwalk-threat::after {
+      content: "";
+      position: absolute;
+      left: -82%;
+      top: 42%;
+      width: 132%;
+      height: 8%;
+      background: #252a2f;
+      transform: rotate(4deg);
+    }
+
+    .shot[data-key="b01"] .bat { left: 47%; bottom: 12%; opacity: .15; transform: scale(.9); }
+    .shot[data-key="b02"] .bat { left: 43%; transform: skewX(-9deg) scale(1.08); }
+    .shot[data-key="b03"] .bat { left: 38%; transform: rotate(-8deg) scale(1.08); }
+    .shot[data-key="b03"] .g3 { transform: rotate(72deg) scale(.95); bottom: 15%; }
+    .shot[data-key="b03"] .motion { left: 35%; top: 34%; opacity: 1; }
+    .shot[data-key="b04"] .bat { left: 49%; transform: rotate(7deg) scale(1.12); }
+    .shot[data-key="b04"] .g4 { left: 46%; transform: rotate(-18deg) scale(1.03); }
+    .shot[data-key="b04"] .g5 { left: 61%; transform: rotate(14deg) scale(1.03); }
+    .shot[data-key="b04"] .motion { left: 48%; top: 35%; opacity: 1; transform: rotate(28deg); }
+    .shot[data-key="b05"] .cape { left: 34%; width: 34%; transform: skewX(-16deg); }
+    .shot[data-key="b05"] .bat { left: 42%; transform: scale(1.16); }
+    .shot[data-key="b05"] .g2 { transform: rotate(-38deg); }
+    .shot[data-key="b05"] .g5 { transform: rotate(38deg); }
+    .shot[data-key="b06"] .bat { left: 42%; width: 16%; height: 66%; bottom: -1%; transform: scale(1.28); }
+    .shot[data-key="b06"] .cape { opacity: .25; }
+    .shot[data-key="b06"] .optic { opacity: 1; animation: opticPulse .65s ease-in-out infinite alternate; }
+    .shot[data-key="b07"] .bat { left: 37%; transform: scale(.96); }
+    .shot[data-key="b07"] .catwalk-threat { opacity: .8; }
+    .shot[data-key="b07"] .optic { opacity: 1; }
+    .shot[data-key="b08"] .bat { left: 42%; transform: rotate(-5deg) scale(1.1); }
+    .shot[data-key="b08"] .g4 { left: 39%; transform: rotate(18deg); }
+    .shot[data-key="b08"] .motion { left: 45%; top: 45%; opacity: 1; transform: rotate(-36deg); }
+    .shot[data-key="b09"] .bat { left: 40%; transform: scale(1.05); }
+    .shot[data-key="b09"] .catwalk-threat { opacity: .35; }
+    .shot[data-key="b09"] .batarang { opacity: 1; animation: throwArc 1.7s cubic-bezier(.19,.72,.14,1) forwards; }
+    .shot[data-key="b10"] .bat { left: 45%; transform: rotate(12deg) scale(1.12); }
+    .shot[data-key="b10"] .g2 { transform: rotate(-26deg); }
+    .shot[data-key="b10"] .g5 { left: 57%; transform: rotate(20deg); }
+    .shot[data-key="b10"] .batarang { opacity: .22; left: 72%; top: 21%; transform: rotate(260deg) scale(.38); }
+    .shot[data-key="b11"] .bat { opacity: 0; }
+    .shot[data-key="b11"] .goon { opacity: .06; }
+    .shot[data-key="b11"] .batarang { opacity: 1; left: 69%; top: 20%; transform: rotate(310deg) scale(.48); }
+    .shot[data-key="b11"] .catwalk-threat { opacity: .25; }
+
+    @keyframes opticPulse {
+      from { filter: brightness(.82); box-shadow: 0 0 12px 4px rgba(185,236,255,.55); }
+      to { filter: brightness(1.45); box-shadow: 0 0 26px 10px rgba(185,236,255,.95); }
+    }
+
+    @keyframes throwArc {
+      from { transform: translate(0, 0) rotate(18deg) scale(.8); }
+      18% { opacity: 1; }
+      to { transform: translate(142%, -620%) rotate(452deg) scale(.36); opacity: .88; }
+    }
+
+    .caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 40;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: end;
+      color: #f3f6f7;
+      text-shadow: 0 3px 16px rgba(0,0,0,.9);
+    }
+
+    .caption strong {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(14px, 1.4vw, 20px);
+      letter-spacing: .02em;
+      margin-bottom: 4px;
+    }
+
+    .caption span {
+      display: block;
+      color: #cbd3d8;
+      font-size: clamp(12px, 1vw, 15px);
+      max-width: 780px;
+      line-height: 1.35;
+    }
+
+    .timecode {
+      color: var(--blue);
+      border: 1px solid rgba(185,236,255,.42);
+      background: rgba(185,236,255,.08);
+      padding: 6px 8px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border-top: 1px solid var(--line);
+      background: rgba(3,4,5,.72);
+    }
+
+    button {
+      appearance: none;
+      border: 1px solid #46515a;
+      background: #121920;
+      color: var(--ink);
+      height: 36px;
+      min-width: 42px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    button:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      gap: 5px;
+    }
+
+    .beat {
+      min-width: 0;
+      height: 7px;
+      padding: 0;
+      border: 0;
+      background: #26313a;
+    }
+
+    .beat.current {
+      background: linear-gradient(90deg, var(--gold), var(--blue));
+      box-shadow: 0 0 14px rgba(185,236,255,.45);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 14px;
+    }
+
+    .board-panel {
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      min-height: 278px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+    }
+
+    .mini {
+      position: relative;
+      min-height: 188px;
+      background:
+        radial-gradient(circle at 58% 42%, rgba(255,255,255,.08), transparent 30%),
+        linear-gradient(180deg, #151b20 0 46%, #050607 46% 100%);
+      overflow: hidden;
+    }
+
+    .mini .goon { height: 42%; width: 8%; bottom: 18%; }
+    .mini .bat { height: 58%; width: 14%; bottom: 10%; }
+    .mini .cape { height: 64%; width: 25%; bottom: 5%; }
+    .mini .catwalk-threat { opacity: .42; }
+    .mini .laser { opacity: .5; }
+    .mini .batarang { opacity: .75; }
+
+    .board-copy {
+      padding: 11px 12px 13px;
+      color: var(--muted);
+      line-height: 1.42;
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+
+    .board-copy strong {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 5px;
+    }
+
+    .manifest {
+      display: grid;
+      grid-template-columns: 82px 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      font-size: 13px;
+    }
+
+    .manifest div {
+      background: var(--panel-2);
+      padding: 10px 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .manifest .head {
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 11px;
+      background: #20262c;
+    }
+
+    .manifest strong { color: var(--gold); }
+
+    .notes {
+      padding: 14px 16px 17px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 8px; }
+
+    @media (max-width: 1180px) {
+      header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .manifest {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        grid-template-columns: auto 1fr;
+      }
+
+      .timecode {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Sequence B Storyboard</h1>
+        <p class="sub">Goon fight through mid-melee batarang throw. Batman is still surrounded when he identifies the elevated laser threat. The throw becomes the trailer button, then the teaser cuts before impact.</p>
+      </div>
+      <div class="status">Fight + Batarang</div>
+    </header>
+
+    <section class="layout">
+      <article class="panel-card">
+        <div class="card-head">
+          <h2>Silent Animatic Pass</h2>
+          <div class="tag">No Impact Shown</div>
+        </div>
+        <div id="stage" class="animatic" aria-label="Sequence B silent animatic">
+          <div class="yard"></div>
+
+          <div class="shot active" data-key="b01" data-title="B01 Hard Cut To Chaos" data-desc="Rain, darkness, armed goons firing blindly. No comfortable establishing shot." data-time="00:00">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g4"></div><div class="goon g5"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div>
+            <div class="muzzle m1"></div><div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b02" data-title="B02 Moving Inside The Group" data-desc="Muzzle flashes reveal Batman already between bodies, not entering cleanly from outside." data-time="00:01">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g3"></div><div class="goon g4"></div><div class="goon g5"></div>
+            <div class="cape"></div><div class="bat"></div>
+            <div class="muzzle m1"></div><div class="muzzle m2"></div><div class="muzzle m3"></div>
+          </div>
+
+          <div class="shot" data-key="b03" data-title="B03 First Silent Takedown" data-desc="Forearm block into a close body check. Brutal, economical, silent." data-time="00:02">
+            <div class="goon g2"></div><div class="goon g3"></div><div class="goon g4"></div>
+            <div class="cape"></div><div class="bat"></div><div class="motion"></div>
+            <div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b04" data-title="B04 Two More Close In" data-desc="He pivots between two attackers, redirecting one into another while gunfire strobes the armor." data-time="00:03">
+            <div class="goon g2"></div><div class="goon g4"></div><div class="goon g5"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div><div class="motion"></div>
+            <div class="muzzle m1"></div><div class="muzzle m3"></div>
+          </div>
+
+          <div class="shot" data-key="b05" data-title="B05 Melee Flow" data-desc="Cape turn, elbow, shoulder, gauntlet strikes. He is still outnumbered and moving." data-time="00:04">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g4"></div><div class="goon g5"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div>
+            <div class="muzzle m1"></div><div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b06" data-title="B06 Optics Activate" data-desc="A calm cowl close-up inside chaos. The dark now belongs to him." data-time="00:06">
+            <div class="goon g1"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div><div class="optic left"></div><div class="optic right"></div>
+            <div class="muzzle m1"></div><div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b07" data-title="B07 Elevated Threat Read" data-desc="Optics catch a thin red laser above. The rifle threat is visible, not defeated." data-time="00:07">
+            <div class="goon g2"></div><div class="goon g4"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div><div class="optic left"></div><div class="optic right"></div><div class="catwalk-threat"></div>
+            <div class="muzzle m3"></div>
+          </div>
+
+          <div class="shot" data-key="b08" data-title="B08 Block And Reach" data-desc="One arm handles the ground fight while the other reaches for the batarang." data-time="00:08">
+            <div class="goon g1"></div><div class="goon g4"></div><div class="goon g5"></div>
+            <div class="cape"></div><div class="bat"></div><div class="motion"></div>
+            <div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b09" data-title="B09 Slow-Motion Throw" data-desc="The batarang rotates upward through rain and muzzle light. This is the Snyder-like teaser button." data-time="00:09">
+            <div class="goon g1"></div><div class="goon g4"></div><div class="goon g6"></div>
+            <div class="cape"></div><div class="bat"></div><div class="catwalk-threat"></div><div class="batarang"></div>
+            <div class="muzzle m1"></div><div class="muzzle m2"></div>
+          </div>
+
+          <div class="shot" data-key="b10" data-title="B10 Back Into The Fight" data-desc="Before impact, Batman is already pivoting back into the surrounding goons." data-time="00:11">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g4"></div><div class="goon g5"></div>
+            <div class="cape"></div><div class="bat"></div><div class="batarang"></div>
+            <div class="muzzle m1"></div><div class="muzzle m3"></div>
+          </div>
+
+          <div class="shot" data-key="b11" data-title="B11 Cut Before Impact" data-desc="The batarang arcs into black rain toward the elevated threat. The hit is not shown." data-time="00:12">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g5"></div><div class="catwalk-threat"></div><div class="batarang"></div>
+          </div>
+
+          <div class="laser"></div>
+          <div class="flash"></div>
+          <div class="rain"></div>
+          <div class="grade"></div>
+          <div class="caption">
+            <div>
+              <strong id="shotTitle">B01 Hard Cut To Chaos</strong>
+              <span id="shotDesc">Rain, darkness, armed goons firing blindly. No comfortable establishing shot.</span>
+            </div>
+            <div id="shotTime" class="timecode">00:00</div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="toggle" type="button" aria-label="Pause">II</button>
+          <div class="timeline" aria-label="Sequence B timeline">
+            <button class="beat current" type="button" data-index="0"></button>
+            <button class="beat" type="button" data-index="1"></button>
+            <button class="beat" type="button" data-index="2"></button>
+            <button class="beat" type="button" data-index="3"></button>
+            <button class="beat" type="button" data-index="4"></button>
+            <button class="beat" type="button" data-index="5"></button>
+            <button class="beat" type="button" data-index="6"></button>
+            <button class="beat" type="button" data-index="7"></button>
+            <button class="beat" type="button" data-index="8"></button>
+            <button class="beat" type="button" data-index="9"></button>
+            <button class="beat" type="button" data-index="10"></button>
+          </div>
+          <div class="timecode">Silent Pass</div>
+        </div>
+      </article>
+
+      <aside class="panel-card">
+        <div class="card-head">
+          <h2>Motion Rules</h2>
+          <div class="tag">Trailer Cut</div>
+        </div>
+        <div class="notes">
+          <ul>
+            <li>The batarang throw is inside the melee, not after the fight is done.</li>
+            <li>Batman blocks or redirects one attacker while reaching for the batarang with the other hand.</li>
+            <li>The elevated rifle holder is only threatened, not hit on-screen.</li>
+            <li>The cut must happen before impact so the payoff remains in the full short film.</li>
+            <li>Firearm flashes and optics carry readability; lightning is secondary.</li>
+          </ul>
+        </div>
+        <div class="card-head">
+          <h2>Shot Manifest</h2>
+          <div class="tag">B01-B11</div>
+        </div>
+        <div class="manifest">
+          <div class="head">Beat</div><div class="head">Action</div><div class="head">Animation Job</div>
+          <div><strong>B01</strong></div><div>Hard cut to darkness, rain, blind gunfire.</div><div>Fast flashes, silhouettes, no clean geography.</div>
+          <div><strong>B02</strong></div><div>Batman is already inside the group.</div><div>Side fragments, strobe movement.</div>
+          <div><strong>B03</strong></div><div>First silent takedown.</div><div>One clear impact pose.</div>
+          <div><strong>B04</strong></div><div>Two more goons close in.</div><div>Pivots and redirection, not a single isolated hit.</div>
+          <div><strong>B05</strong></div><div>Cape, elbow, shoulder, gauntlet flow.</div><div>Continuous melee fragments.</div>
+          <div><strong>B06</strong></div><div>Optics activate mid-combat.</div><div>Calm close-up contrast.</div>
+          <div><strong>B07</strong></div><div>Elevated laser/rifle threat appears.</div><div>Upward scan, rain, red line.</div>
+          <div><strong>B08</strong></div><div>Block and reach for batarang.</div><div>Two tasks in one pose.</div>
+          <div><strong>B09</strong></div><div>Slow-motion batarang throw.</div><div>Hero rotation shot through rain.</div>
+          <div><strong>B10</strong></div><div>Batman pivots back into melee.</div><div>Show fight continues before impact.</div>
+          <div><strong>B11</strong></div><div>Batarang arcs into blackness.</div><div>Cut before hit.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel-card" style="margin-top:16px;">
+      <div class="card-head">
+        <h2>Storyboard Panels</h2>
+        <div class="tag">Composition Board</div>
+      </div>
+      <div class="grid">
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g2"></div><div class="goon g5"></div><div class="cape"></div><div class="bat"></div><div class="muzzle m1"></div>
+          </div>
+          <div class="board-copy"><strong>B01</strong>Hard cut into blind firing and rain. Batman barely reads.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g3"></div><div class="goon g5"></div><div class="cape"></div><div class="bat" style="left:42%;transform:skewX(-10deg) scale(1.1);"></div><div class="muzzle m2"></div>
+          </div>
+          <div class="board-copy"><strong>B02</strong>He is already between the goons, seen in fragments.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g3" style="transform:rotate(70deg);bottom:12%;"></div><div class="cape"></div><div class="bat" style="left:38%;transform:rotate(-8deg) scale(1.12);"></div><div class="motion" style="opacity:1;left:35%;top:30%;"></div>
+          </div>
+          <div class="board-copy"><strong>B03</strong>First takedown, silent and compact.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g4" style="left:43%;transform:rotate(-18deg);"></div><div class="goon g5" style="left:60%;transform:rotate(16deg);"></div><div class="cape"></div><div class="bat" style="left:49%;transform:rotate(7deg) scale(1.08);"></div><div class="muzzle m3"></div>
+          </div>
+          <div class="board-copy"><strong>B04</strong>More attackers enter close quarters immediately.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g2" style="transform:rotate(-38deg);"></div><div class="goon g5" style="transform:rotate(38deg);"></div><div class="cape" style="left:34%;width:34%;transform:skewX(-16deg);"></div><div class="bat" style="left:42%;transform:scale(1.14);"></div>
+          </div>
+          <div class="board-copy"><strong>B05</strong>Cape turn and gauntlet work. He remains surrounded.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g6"></div><div class="cape" style="opacity:.25;"></div><div class="bat" style="left:42%;width:16%;height:66%;bottom:-1%;transform:scale(1.25);"></div><div class="optic left" style="opacity:1;"></div><div class="optic right" style="opacity:1;"></div>
+          </div>
+          <div class="board-copy"><strong>B06</strong>Optics activate as the only stable bright point.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g2"></div><div class="goon g6"></div><div class="cape"></div><div class="bat" style="left:37%;"></div><div class="catwalk-threat"></div><div class="laser"></div>
+          </div>
+          <div class="board-copy"><strong>B07</strong>Thin red laser threat appears above through rain.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g4" style="left:39%;transform:rotate(18deg);"></div><div class="goon g5"></div><div class="cape"></div><div class="bat" style="left:42%;transform:rotate(-5deg) scale(1.1);"></div><div class="motion" style="opacity:1;left:45%;top:43%;transform:rotate(-36deg);"></div>
+          </div>
+          <div class="board-copy"><strong>B08</strong>One arm blocks while the other reaches for the batarang.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g6"></div><div class="cape"></div><div class="bat" style="left:40%;"></div><div class="catwalk-threat"></div><div class="laser"></div><div class="batarang" style="left:60%;top:35%;transform:rotate(220deg) scale(.55);opacity:1;"></div>
+          </div>
+          <div class="board-copy"><strong>B09</strong>Slow-motion rotation through rain and gunfire.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1"></div><div class="goon g2" style="transform:rotate(-26deg);"></div><div class="goon g5" style="left:57%;transform:rotate(20deg);"></div><div class="cape"></div><div class="bat" style="left:45%;transform:rotate(12deg) scale(1.12);"></div><div class="batarang" style="left:74%;top:20%;transform:rotate(260deg) scale(.38);opacity:.28;"></div>
+          </div>
+          <div class="board-copy"><strong>B10</strong>Batman pivots back to the ground fight before payoff.</div>
+        </article>
+        <article class="board-panel">
+          <div class="mini">
+            <div class="goon g1" style="opacity:.08;"></div><div class="goon g5" style="opacity:.08;"></div><div class="catwalk-threat" style="opacity:.28;"></div><div class="laser" style="opacity:.65;"></div><div class="batarang" style="left:69%;top:20%;transform:rotate(310deg) scale(.48);opacity:1;"></div>
+          </div>
+          <div class="board-copy"><strong>B11</strong>Cut before impact. Full short keeps the hit.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const shots = [...document.querySelectorAll(".animatic .shot")];
+    const beats = [...document.querySelectorAll(".beat")];
+    const title = document.querySelector("#shotTitle");
+    const desc = document.querySelector("#shotDesc");
+    const time = document.querySelector("#shotTime");
+    const toggle = document.querySelector("#toggle");
+    const durations = [1000, 1200, 900, 1300, 1400, 1000, 1100, 1200, 1600, 800, 900];
+    let index = 0;
+    let playing = true;
+    let timer = 0;
+
+    function activate(next) {
+      index = next;
+      shots.forEach((shot) => shot.classList.remove("active"));
+      shots[index].classList.add("active");
+      beats.forEach((beat) => beat.classList.remove("current"));
+      beats[index].classList.add("current");
+      title.textContent = shots[index].dataset.title;
+      desc.textContent = shots[index].dataset.desc;
+      time.textContent = shots[index].dataset.time;
+      window.clearTimeout(timer);
+      if (playing) {
+        timer = window.setTimeout(() => activate((index + 1) % shots.length), durations[index]);
+      }
+    }
+
+    toggle.addEventListener("click", () => {
+      playing = !playing;
+      toggle.textContent = playing ? "II" : ">";
+      toggle.setAttribute("aria-label", playing ? "Pause" : "Play");
+      if (playing) activate(index);
+      else window.clearTimeout(timer);
+    });
+
+    beats.forEach((beat) => {
+      beat.addEventListener("click", () => activate(Number(beat.dataset.index)));
+    });
+
+    activate(0);
+  </script>
+</body>
+</html>
